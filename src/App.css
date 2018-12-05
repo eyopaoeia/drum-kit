@@ -1,4 +1,34 @@
+@font-face {
+    font-family: 'bonzairegular';
+    src: url('./fonts/bonzai-webfont.woff2') format('woff2'),
+         url('./fonts/bonzai-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
+@font-face {
+    font-family: 'arabian_knightregular';
+    src: url('./fonts/arabian_knight-webfont.woff2') format('woff2'),
+         url('./fonts/arabian_knight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'wild_africaregular';
+    src: url('./fonts/wild_africa-webfont.woff2') format('woff2'),
+         url('./fonts/wild_africa-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'zilap_africaregular';
+    src: url('./fonts/zilap_africa_demo-webfont.woff2') format('woff2'),
+         url('./fonts/zilap_africa_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
   margin: 0;
@@ -58,17 +88,25 @@ body {
 .japan {
   background: rgb(255, 231, 246, 0.6);
   box-shadow: inset 0 0 7px 3px #ffb3d5;
+  font-family: 'bonzairegular';
+  font-size: 28pt;
+  color: #454545;
 }
 
 .burundi {
   background: rgb(193, 180, 129, 0.8);
   box-shadow: inset 0 0 8px 4px #a9715f;
+  font-family: 'wild_africaregular';
+  font-size: 24pt;
+  color: #454545;
 }
 
 .morocco {
   background: rgb( 255, 221, 217 , 0.9);
   box-shadow: inset 0 0 8px 4px #ff7520;
-  color: ;
+  color: #454545;
+  font-family: 'arabian_knightregular';
+  font-size: 26pt;
 }
 
 .drum-key-off {
@@ -98,8 +136,27 @@ body {
   height: 5vh;
   box-sizing: border-box;
   text-align: center;
+  color: #454545;
 }
 
+.japan-drumName {
+  font-family: 'bonzairegular';
+  font-size: 24pt;
+  text-shadow: 2px 2px #ffb3d5;
+}
+
+.burundi-drumName {
+  font-family: 'zilap_africaregular';
+  font-size: 20pt;
+  text-shadow: 2px 2px #ffcb0c;
+}
+
+.morocco-drumName {
+  font-family: 'arabian_knightregular';
+  font-size: 20pt;
+  text-shadow: 2px 2px #ff5900;
+
+}
 
 /* left side - power & country selector*/
 
@@ -171,24 +228,32 @@ body {
 
 .display-japan {
   align-self: center;
-  color: red;
+  font-family: 'bonzairegular';
+  font-size: 24pt;
+  color: #454545;
+  text-shadow: 2px 2px #ffb3d5;
 }
 
 .display-morocco {
   align-self: center;
+  font-family: 'arabian_knightregular';
+  font-size: 22pt;
+  text-shadow: 2px 2px #ff5900;
 
 }
 
 .display-burundi {
   align-self: center;
-
+  font-family: 'wild_africaregular';
+  font-size: 16pt;
+  color: #454545;
+  text-shadow: 2px 2px #ffcb0c;
 }
 
 .display-none {
   align-self: center;
 }
 
-/* added when a button is pressed */
 
 
 

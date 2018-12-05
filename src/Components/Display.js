@@ -58,17 +58,17 @@ export class Display extends React.Component {
         if (this.props.country === 'japan') {
           return <div id="display" className=''>
                  <Japanese addPressAnimation={this.addPressAnimation} removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
-                 <p className='drumName '>{this.props.text}</p></div>  
+                 <p className='drumName japan-drumName'>{this.props.text}</p></div>  
         }
         else if(this.props.country === 'morocco') {
           return <div id="display" className='' >
                  <Moroccan addPressAnimation={this.addPressAnimation} removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
-                 <p className='drumName '>{this.props.text}</p></div>
+                 <p className='drumName morocco-drumName'>{this.props.text}</p></div>
         }
         else if(this.props.country === 'burundi'){
           return <div id="display" className='' >
                  <Burundi addPressAnimation={this.addPressAnimation} removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
-                 <p className='drumName '>{this.props.text}</p></div>
+                 <p className='drumName burundi-drumName'>{this.props.text}</p></div>
         }
       else {
         return <div id="display" className='' ><DrumOff /><p className='drumName'>{this.props.text}</p></div>
