@@ -52,7 +52,7 @@ body {
 .drum-key {
   border-radius: 5%;
   border: none;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 }
 
 .japan {
@@ -75,12 +75,19 @@ body {
   border: none;
 }
 
-/* animation when a key is pressed */
+/* animation when a key is pressed or clicked*/
 
-.pressed {
+.clicked {
   transform: scale(1.2);
   border-color: #fff300;
   box-shadow: 0 0 6px 2px #fff300;
+}
+
+.pressed {
+  transform: scale(1.1);
+  border-color: #fff300;
+  box-shadow: 0 0 6px 2px #fff300;
+  transition: all .1s ;
 }
 
 /* type of drum currently playing */

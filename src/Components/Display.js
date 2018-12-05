@@ -16,9 +16,8 @@ export class Display extends React.Component {
   }
   
   removeTransition(event) {
-    if (event.propertyName !== 'transform') {
     event.target.classList.remove('pressed');
-  }
+    event.target.classList.remove('clicked');
   }
 
   createButtons(drum) { return(
@@ -43,13 +42,14 @@ export class Display extends React.Component {
 
   addClickAnimation(event) {
     var key = document.querySelector(`button[value='${event.target.value}']`)
-    key.classList.add('pressed');
+    key.classList.add('clicked');
   }
 
   addPressAnimation(event) {
-    console.log(event.keyCode)
-    var keyValues = {81: 'Q', 87: 'W', 69:'E', 65:'A', 83:'S', 68:'D', 90:'Z', 88:'X', 67:'C'}
-    console.log(keyValues[event.KeyCode])
+    let code = event.keyCode;
+    let keyValues = {81: 'Q', 87: 'W', 69:'E', 65:'A', 83:'S', 68:'D', 90:'Z', 88:'X', 67:'C'};
+    let key = document.querySelector(`button[value='${keyValues[code]}']`);
+    key.classList.add('pressed');
   }
 
 
@@ -57,12 +57,12 @@ export class Display extends React.Component {
   render() {
         if (this.props.country === 'japan') {
           return <div id="display" className=''>
-                 <Japanese removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
+                 <Japanese addPressAnimation={this.addPressAnimation} removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
                  <p className='drumName '>{this.props.text}</p></div>  
         }
         else if(this.props.country === 'morocco') {
           return <div id="display" className='' >
-                 <Moroccan removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
+                 <Moroccan addPressAnimation={this.addPressAnimation} removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
                  <p className='drumName '>{this.props.text}</p></div>
         }
         else if(this.props.country === 'burundi'){
