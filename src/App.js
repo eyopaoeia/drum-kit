@@ -1,27 +1,59 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Display } from './Components/Display.js';
+import { PowerButton } from './Components/PowerButton.js'
+import { DrumType } from './Components/DrumType.js'
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      country: 'japan',
+      prevCountry: '', 
+      power: 'on',
+      text: ''
+    }
+    this.handleCountry = this.handleCountry.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
+  } 
+
+  handleCountry(event) {
+    this.setState({
+      country: event.target.value
+    })
+
+  }
+  
+  handleToggle(event) {
+    if (this.state.country === 'none') {
+      let previous = this.state.prevCountry;
+      this.setState({
+        country: previous,
+        prevCountry: 'japan',
+        power: 'on'
+      })
+    }
+    else {
+       let previous = this.state.country;
+        this.setState({
+          country: 'none',
+          prevCountry: previous,
+          power: 'off'
+        })
+    }
+    
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="drum-machine">
+        <Display country={this.state.country} text={this.state.text}/>
+        <div className='inputs'>
+          <PowerButton handleToggle={this.handleToggle} />
+          <DrumType handleCountry={this.handleCountry} power={this.state.power}/>
+        </div>
       </div>
-    );
+    )
   }
 }
 
