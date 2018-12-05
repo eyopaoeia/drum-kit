@@ -8,13 +8,13 @@ export class DrumOff extends React.Component{
   }
   
   createButtons(drum) { return(
-    <button className='drum-pad button'>
+    <button className='drum-key-off drum-key'>
     {drum.key}</button>
     )}
   
   render() {
     return (
-    <div className='none drumPad'>
+    <div className='none-pad drumPad'>
      {this.state.drumList.map(this.createButtons)}
     </div>
     )

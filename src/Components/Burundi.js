@@ -17,16 +17,22 @@ export class Burundi extends React.Component {
   }
   
   handlePress(country, event) {
-  	const keyCodes = [81, 87, 88, 69, 65, 83, 68, 90, 88, 67];
+
+  	const keyCodes = [81, 87, 69, 65, 83, 68, 90, 88, 67];
   	if (keyCodes.includes(event.keyCode)) {
+  		this.props.addPressAnimation(event);
     	var audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-    	console.log(audio);
     	this.props.bangDrum(audio, country);
 	}
   }
   
   componentWillMount() {
     document.addEventListener('keydown', this.handlePress.bind(this, this.state.country));
+  }
+
+  componentDidMount() {
+    const keys=document.querySelectorAll('.drum-key');
+    keys.forEach(key => key.addEventListener('transitionend', this.props.removeTransition))
   }
   
   componentWillUnmount() {

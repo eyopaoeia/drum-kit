@@ -10,17 +10,25 @@ export class Display extends React.Component {
     this.createButtons = this.createButtons.bind(this);
     this.onClick = this.onClick.bind(this);
     this.bangDrum = this.bangDrum.bind(this);
+    this.removeTransition = this.removeTransition.bind(this);
+    this.addClickAnimation = this.addClickAnimation.bind(this);
+    this.addPressAnimation = this.addPressAnimation.bind(this);
   }
   
-
+  removeTransition(event) {
+    if (event.propertyName !== 'transform') {
+    event.target.classList.remove('pressed');
+  }
+  }
 
   createButtons(drum) { return(
-    <button className='drum-pad button' value={drum.key} onClick={this.onClick.bind(this, drum.country)} id={drum.name}>
+    <button className={`drum-key ${drum.country}`} value={drum.key} onClick={this.onClick.bind(this, drum.country)} id={drum.name}>
     <audio id={drum.key} data-key={drum.keyCode}
     src={drum.src} className='clip'/>{drum.key}</button>
     )}
 
   onClick(country, event) {
+    this.addClickAnimation(event);
     var audio = document.getElementById(event.target.value);
     this.bangDrum(audio, country);    
   }
@@ -33,25 +41,37 @@ export class Display extends React.Component {
     audio.play();
   }
 
+  addClickAnimation(event) {
+    var key = document.querySelector(`button[value='${event.target.value}']`)
+    key.classList.add('pressed');
+  }
+
+  addPressAnimation(event) {
+    console.log(event.keyCode)
+    var keyValues = {81: 'Q', 87: 'W', 69:'E', 65:'A', 83:'S', 68:'D', 90:'Z', 88:'X', 67:'C'}
+    console.log(keyValues[event.KeyCode])
+  }
+
+
 
   render() {
         if (this.props.country === 'japan') {
           return <div id="display" className=''>
-                 <Japanese setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
-                 <p className='drumName'>{this.props.text}</p></div>  
+                 <Japanese removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
+                 <p className='drumName '>{this.props.text}</p></div>  
         }
         else if(this.props.country === 'morocco') {
           return <div id="display" className='' >
-                 <Moroccan setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
-                 <p className='drumName'>{this.props.text}</p></div>
+                 <Moroccan removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
+                 <p className='drumName '>{this.props.text}</p></div>
         }
         else if(this.props.country === 'burundi'){
           return <div id="display" className='' >
-                 <Burundi setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
-                 <p className='drumName'>{this.props.text}</p></div>
+                 <Burundi addPressAnimation={this.addPressAnimation} removeTransition={this.removeTransition} setInnerText={this.setInnerText} createButtons={this.createButtons} bangDrum={this.bangDrum}/>
+                 <p className='drumName '>{this.props.text}</p></div>
         }
       else {
-        return <div id="display" className='' ><DrumOff /><p>{this.props.text}</p></div>
+        return <div id="display" className='' ><DrumOff /><p className='drumName'>{this.props.text}</p></div>
       }
       
   }

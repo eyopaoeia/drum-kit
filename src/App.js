@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Display } from './Components/Display.js';
 import { PowerButton } from './Components/PowerButton.js'
 import { DrumType } from './Components/DrumType.js'
@@ -20,7 +20,8 @@ class App extends React.Component {
 
   handleCountry(event) {
     this.setState({
-      country: event.target.value
+      country: event.target.value,
+      text: ''
     })
 
   }
@@ -59,7 +60,7 @@ class App extends React.Component {
         <Display country={this.state.country} text={this.state.text} setInnerText={this.setInnerText}/>
         <div className='inputs'>
           <PowerButton handleToggle={this.handleToggle} />
-          <DrumType handleCountry={this.handleCountry} power={this.state.power}/>
+          <DrumType handleCountry={this.handleCountry} power={this.state.power} country={this.state.country}/>
         </div>
       </div>
     )

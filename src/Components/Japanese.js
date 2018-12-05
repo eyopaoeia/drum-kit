@@ -29,6 +29,11 @@ export class Japanese extends React.Component {
   componentWillMount() {
     document.addEventListener('keydown', this.handlePress.bind(this, this.state.country));
   }
+
+  componentDidMount() {
+    const keys=document.querySelectorAll('.drum-key');
+    keys.forEach(key => key.addEventListener('transitionend', this.props.removeTransition))
+  }
   
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handlePress);
