@@ -15,6 +15,7 @@ class App extends React.Component {
     }
     this.handleCountry = this.handleCountry.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
+    this.setInnerText = this.setInnerText.bind(this);
   } 
 
   handleCountry(event) {
@@ -38,16 +39,24 @@ class App extends React.Component {
         this.setState({
           country: 'none',
           prevCountry: previous,
-          power: 'off'
+          power: 'off',
+          text: ''
         })
+
     }
     
+  }
+
+  setInnerText(name) {
+    this.setState({
+      text: name
+    })
   }
 
   render() {
     return (
       <div id="drum-machine">
-        <Display country={this.state.country} text={this.state.text}/>
+        <Display country={this.state.country} text={this.state.text} setInnerText={this.setInnerText}/>
         <div className='inputs'>
           <PowerButton handleToggle={this.handleToggle} />
           <DrumType handleCountry={this.handleCountry} power={this.state.power}/>
