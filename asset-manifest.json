@@ -1,14 +1,14 @@
 {
-  "main.css": "/drum-kit/static/css/main.10e5704d.chunk.css",
-  "main.js": "/drum-kit/static/js/main.1022fd69.chunk.js",
-  "main.js.map": "/drum-kit/static/js/main.1022fd69.chunk.js.map",
+  "main.css": "/drum-kit/static/css/main.8df04738.chunk.css",
+  "main.js": "/drum-kit/static/js/main.030c9bef.chunk.js",
+  "main.js.map": "/drum-kit/static/js/main.030c9bef.chunk.js.map",
   "static/js/1.77958300.chunk.js": "/drum-kit/static/js/1.77958300.chunk.js",
   "static/js/1.77958300.chunk.js.map": "/drum-kit/static/js/1.77958300.chunk.js.map",
   "runtime~main.js": "/drum-kit/static/js/runtime~main.4e92e049.js",
   "runtime~main.js.map": "/drum-kit/static/js/runtime~main.4e92e049.js.map",
-  "static/media/App.css": "/drum-kit/static/media/wild_africa-webfont.5ba51fdb.woff",
-  "static/css/main.10e5704d.chunk.css.map": "/drum-kit/static/css/main.10e5704d.chunk.css.map",
+  "static/media/App.css": "/drum-kit/static/media/wild_africa-webfont.06d2c2e0.woff2",
+  "static/css/main.8df04738.chunk.css.map": "/drum-kit/static/css/main.8df04738.chunk.css.map",
   "index.html": "/drum-kit/index.html",
-  "precache-manifest.1f40e346723f1dec1d8872e56c20b954.js": "/drum-kit/precache-manifest.1f40e346723f1dec1d8872e56c20b954.js",
+  "precache-manifest.7cb1cadbad1fec77b28c12e7afe7e903.js": "/drum-kit/precache-manifest.7cb1cadbad1fec77b28c12e7afe7e903.js",
   "service-worker.js": "/drum-kit/service-worker.js"
 }
