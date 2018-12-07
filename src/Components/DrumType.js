@@ -2,6 +2,7 @@ import React from 'react';
 
 export class DrumType extends React.Component{
   
+  /*if the power is on render the active buttons, else render inactive buttons*/
   render() {
     if (this.props.power === 'on') {
       return (

@@ -17,6 +17,7 @@ export class Japanese extends React.Component {
     ]}
   }
   
+  /*find which key was pressed and assign the appropriate audio*/
   handlePress(country, event) {
     const keyCodes = [81, 87, 88, 69, 65, 83, 68, 90, 88, 67];
     if (keyCodes.includes(event.keyCode)) {
@@ -26,10 +27,12 @@ export class Japanese extends React.Component {
   }
   }
   
+  
   componentWillMount() {
     document.addEventListener('keydown', this.handlePress.bind(this, this.state.country));
   }
 
+  /* listen for the end of the key style transition and remove it*/
   componentDidMount() {
     const keys=document.querySelectorAll('.drum-key');
     keys.forEach(key => key.addEventListener('transitionend', this.props.removeTransition))
@@ -39,6 +42,8 @@ export class Japanese extends React.Component {
     document.removeEventListener('keydown', this.handlePress);
   }
 
+  /*use the country-specific drum list in state with the createButtons
+  function passed in props to render drumpad keys*/
   render() {
     return (
     <div className='japan-pad drumPad'>

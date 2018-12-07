@@ -30,6 +30,7 @@ export class Burundi extends React.Component {
     document.addEventListener('keydown', this.handlePress.bind(this, this.state.country));
   }
 
+  /* listen for the end of the key style transition and remove it*/
   componentDidMount() {
     const keys=document.querySelectorAll('.drum-key');
     keys.forEach(key => key.addEventListener('transitionend', this.props.removeTransition))
@@ -39,7 +40,8 @@ export class Burundi extends React.Component {
     document.removeEventListener('keydown', this.handlePress);
   }
   
-  
+  /*use the country-specific drum list in state with the createButtons
+  function passed in props to render drumpad keys*/
   render() {
     return (
     <div className='burundi-pad drumPad'>
