@@ -92,11 +92,6 @@ body {
 /* phone  */
 @media (max-width: 768px) {
   #drum-machine {
-    /*position: absolute;
-    top: 5vh;
-    left: 10vw;
-    height: 90vh;*/
-
     display: flex;
     flex-direction: column-reverse;
     height: 90vh;
@@ -131,17 +126,12 @@ body {
 /* phone */
 @media (max-width: 768px) {
   .left-side {
-    /*position: absolute;
-    width: 70vw;
-    margin: 0;
-    bottom: 0;*/
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 60vh;
     width: 80vw;
     text-align: center;
-    justify-content: center;
   }
 }
 
@@ -156,21 +146,16 @@ body {
   grid-gap: 5vw;
   padding: 2vw;
   border-radius: 3%;
-
 }
 
   /* phone */
 @media (max-width: 768px) {
   .drumPad {
-    /*position: absolute;
-    bottom: 15vw;
-    left: 3vw;
-    right: 3vw;*/
     margin: 0 auto;
+    margin-bottom: 1vh;
     }
 
   .none-pad {
-    /*width: 88%;*/
     margin-bottom: 10vh;
   }
 
@@ -248,7 +233,7 @@ body {
 /* animation when a key is pressed or clicked*/
 
 .clicked {
-  transform: scale(1.2);
+  transform: scale(1.1);
   border-color: #fff300;
   box-shadow: 0 0 6px 2px #fff300;
 }
@@ -264,12 +249,12 @@ body {
 
 .drumName {
   align-self: center;
-  bottom: 1vh;
-  margin: 0;
-  padding: 0;
   width: 100%;
   text-align: center;
-  margin: 0 5vw;
+  margin: 0;
+  margin-top: 2vh;
+  padding: 0;
+  height: 10vh;
 }
 
 /* desktop */
@@ -302,7 +287,7 @@ body {
 }
 .burundi-drumName {
   font-family: 'zilap_africaregular';
-  font-size: 18pt;
+  font-size: 16pt;
   text-shadow: 2px 2px #ffcb0c;
 }
 
@@ -328,12 +313,6 @@ body {
 
 @media (max-width: 768px) {
   .inputs {
-    /*position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;*/
     width: 80vw;
     height: 40vh;
     margin: 0;
