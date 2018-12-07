@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2e89c2b7ec12ce0beb35",
-    "url": "/drum-kit/static/css/main.1f3435e2.chunk.css"
+    "revision": "35f70927d8ad84ce6742",
+    "url": "/drum-kit/static/css/main.a392ba63.chunk.css"
   },
   {
-    "revision": "2e89c2b7ec12ce0beb35",
-    "url": "/drum-kit/static/js/main.2e89c2b7.chunk.js"
+    "revision": "35f70927d8ad84ce6742",
+    "url": "/drum-kit/static/js/main.35f70927.chunk.js"
   },
   {
     "revision": "77958300264c6869a197",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/wild_africa-webfont.5ba51fdb.woff"
   },
   {
-    "revision": "68e4713c32fb7d8fde4c8bc41b26309d",
+    "revision": "b23168987587d2c9d464800ad4c9f1cf",
     "url": "/drum-kit/index.html"
   }
 ];
