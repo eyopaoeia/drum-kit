@@ -86,17 +86,21 @@ body {
   border-radius: 1%;
   box-sizing: border-box;
   background: rgb(250, 250, 250, 0.8);
-  z-index: -2;
+
 }
 
 /* phone  */
 @media (max-width: 768px) {
   #drum-machine {
-    position: absolute;
+    /*position: absolute;
     top: 5vh;
     left: 10vw;
-    height: 90vh;
+    height: 90vh;*/
 
+    display: flex;
+    flex-direction: column-reverse;
+    height: 90vh;
+    margin: 5vh 10vw;
   }
 }
 
@@ -127,10 +131,17 @@ body {
 /* phone */
 @media (max-width: 768px) {
   .left-side {
-    position: absolute;
+    /*position: absolute;
     width: 70vw;
     margin: 0;
-    bottom: 0;
+    bottom: 0;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 80vw;
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -144,20 +155,23 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 5vw;
   padding: 2vw;
+  border-radius: 3%;
 
 }
 
   /* phone */
 @media (max-width: 768px) {
   .drumPad {
-    position: absolute;
+    /*position: absolute;
     bottom: 15vw;
     left: 3vw;
-    right: 3vw;
+    right: 3vw;*/
+    margin: 0 auto;
     }
 
   .none-pad {
-    width: 88%;
+    /*width: 88%;*/
+    margin-bottom: 10vh;
   }
 
 }
@@ -249,7 +263,7 @@ body {
 /* type of drum currently playing */
 
 .drumName {
-  position: absolute;
+  align-self: center;
   bottom: 1vh;
   margin: 0;
   padding: 0;
@@ -264,9 +278,21 @@ body {
   position: relative;
   height: 50px;
   padding: 8px;
-  align-self: center;
   color: #454545;
   }
+
+  .japan-drumName {
+    font-size: 28pt;
+  }
+
+  .burundi-drumName {
+    font-size: 20pt;
+  }
+
+  .morocco-drumName {
+    font-size: 22pt;
+  }
+
 }
 
 .japan-drumName {
@@ -287,36 +313,29 @@ body {
 }
 
 
-  /* desktop */
-@media (min-width: 768px) {
-.japan-drumName {
-  font-size: 28pt;
-}
 
-.burundi-drumName {
-  font-size: 20pt;
-}
-
-.morocco-drumName {
-  font-size: 22pt;
-}
-
-}
-
-/* left side - power & country selector*/
+/* right side - power & country selector*/
 
 .inputs {
   width: 35vw;
   margin-left: 10%;
-  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
 }
 
 @media (max-width: 768px) {
   .inputs {
-    position: absolute;
+    /*position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;*/
+    width: 80vw;
+    height: 40vh;
     margin: 0;
     padding: 0;
   }
@@ -327,6 +346,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; 
+  height: 10vh;
 }
 
 .label {
@@ -351,17 +371,23 @@ body {
 
 /* column for country selectors and label saying which is selected */
 
+
 .drumType {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-}
+  justify-content: space-around;
+  }
+
 
 /* row of country buttons */
 
 .drumNames {
   display: flex;
+  width: 100%;
   justify-content: space-around;
-
+  margin: 0;
 }
 
   /* desktop */
@@ -389,7 +415,6 @@ body {
 }
 
 .japan-button {
-
   background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Japan_flag_-_variant.png/1024px-Japan_flag_-_variant.png');
   background-size: cover;
   background-position: 45% center;
@@ -411,17 +436,17 @@ body {
 /* label for which country is selected */
 
 .display-japan {
-  margin-top: 4vh;
-  align-self: center;
+
+  text-align: center;
   font-family: 'bonzairegular';
   font-size: 24pt;
   color: #454545;
   text-shadow: 2px 2px #ffb3d5;
+  margin: 0;
 }
 
 .display-morocco {
-  margin-top: 5vh;
-  align-self: center;
+  text-align: center;
   font-family: 'arabian_knightregular';
   font-size: 18pt;
   color: #454545;
@@ -429,8 +454,7 @@ body {
 }
 
 .display-burundi {
-  margin-top: 5vh;
-  align-self: center;
+  text-align: center;
   font-family: 'wild_africaregular';
   font-size: 16pt;
   color: #454545;
@@ -444,6 +468,7 @@ body {
   font-size: 20pt;
 }
 
+  /* phone */
 @media (max-height: 640px) {
   .display-japan {
     margin-top: 2vh;
