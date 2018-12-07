@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "030c9bef923741d589fd",
-    "url": "/drum-kit/static/css/main.8df04738.chunk.css"
+    "revision": "dcb103f532e9704d4116",
+    "url": "/drum-kit/static/css/main.f5a4b55a.chunk.css"
   },
   {
-    "revision": "030c9bef923741d589fd",
-    "url": "/drum-kit/static/js/main.030c9bef.chunk.js"
+    "revision": "dcb103f532e9704d4116",
+    "url": "/drum-kit/static/js/main.dcb103f5.chunk.js"
   },
   {
     "revision": "77958300264c6869a197",
@@ -28,10 +28,6 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/zilap_africa_demo-webfont.726c9cf4.woff"
   },
   {
-    "revision": "e700d0dcf85d6bbd26e77667b13249e2",
-    "url": "/drum-kit/static/media/arabian_knight-webfont.e700d0dc.woff2"
-  },
-  {
     "revision": "3fe0b1d384323e8bc90f6fd5434043ee",
     "url": "/drum-kit/static/media/bonzai-webfont.3fe0b1d3.woff"
   },
@@ -40,15 +36,19 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/arabian_knight-webfont.dc43868e.woff"
   },
   {
-    "revision": "5ba51fdb1e2cac8d562b5f39972f821a",
-    "url": "/drum-kit/static/media/wild_africa-webfont.5ba51fdb.woff"
+    "revision": "e700d0dcf85d6bbd26e77667b13249e2",
+    "url": "/drum-kit/static/media/arabian_knight-webfont.e700d0dc.woff2"
   },
   {
     "revision": "06d2c2e08e6a109b5e180fe3d05cf713",
     "url": "/drum-kit/static/media/wild_africa-webfont.06d2c2e0.woff2"
   },
   {
-    "revision": "f423f0b612a520f1b1dcda201a829bda",
+    "revision": "5ba51fdb1e2cac8d562b5f39972f821a",
+    "url": "/drum-kit/static/media/wild_africa-webfont.5ba51fdb.woff"
+  },
+  {
+    "revision": "5f39fd4fba0921a5eefab2a3a64973cd",
     "url": "/drum-kit/index.html"
   }
 ];
