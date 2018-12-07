@@ -34,70 +34,142 @@
 body {
   margin: 0;
   background: #e7e7e7;
-
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 
 /* country background styles */
 
 .japan-background {
-  background: url('https://blog.hdwallsource.com/wp-content/uploads/2016/04/sakura-flower-20975-21512-hd-wallpapers.jpg');
-  background-size: cover;
-  background-position: ;
-
+  background: url('https://blog.hdwallsource.com/wp-content/uploads/2016/04/sakura-flower-20975-21512-hd-wallpapers.jpg') no-repeat;
+  background-size: auto 100vh;
+  background-position: 100% top;
 }
 
 .burundi-background {
-  background: url('https://i.ytimg.com/vi/Kr1Z9jVPBz4/maxresdefault.jpg');
-  background-size: cover;
-  background-position: center 0%;
+  background: url('https://i.ytimg.com/vi/Kr1Z9jVPBz4/maxresdefault.jpg') no-repeat;
+  background-position: 30% top;
 }
 
 .morocco-background {
-  background: url('http://agents-prod-cd-portal.azurewebsites.net/-/media/Deals/Deals%202018/Peregrine-Morocco.jpg');
-  background-size: cover;
-  background-position: 60%;
+  background: url('http://agents-prod-cd-portal.azurewebsites.net/-/media/Deals/Deals%202018/Peregrine-Morocco.jpg') no-repeat;
+  background-position: 30% top;
+  background-size: auto 100vh;
+}
+
+
+  /* desktop */
+@media (min-width: 768px) {
+
+  .japan-background {
+    background-size: cover;
+  }
+
+  .burundi-background {
+    background-size: cover;
+    background-position: center 0%;
+  }
+
+  .morocco-background {
+    background-size: cover;
+    background-position: 60%;
+  }
 }
 
 
 /* drum kit container */
-
 #drum-machine {
   width: 80vw;
-  height: 80vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0 0 8px 4px #545454;
   border-radius: 1%;
   box-sizing: border-box;
-  margin: 5% auto;
   background: rgb(250, 250, 250, 0.8);
+}
+
+/* phone  */
+@media (max-width: 768px) {
+  #drum-machine {
+    position: absolute;
+    top: 5vh;
+    left: 10vw;
+    height: 90vh;
+
+  }
+}
+
+/*desktop */
+@media (min-width: 769px) {
+  #drum-machine {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 5% auto;
+  }
 }
 
 /* left side of the drum kit*/
 
+/*desktop*/
+@media (min-width: 769px) {
 .left-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  }
+}
+
+/* phone */
+@media (max-width: 768px) {
+  .left-side {
+    position: absolute;
+    width: 70vw;
+    margin: 0;
+    bottom: 0;
+  }
 }
 
 /* Default keypad and country specific styles*/
 
 .drumPad {
-  width: 25vw;
-  height: 25vw;
-  margin-top: 8vh;
+  width: 70vw;
+  height: 70vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  padding: 30px;
-  border-radius: 5%;
-  
+  grid-gap: 5vw;
+  padding: 2vw;
+
+}
+
+  /* phone */
+@media (max-width: 768px) {
+  .drumPad {
+    position: absolute;
+    bottom: 15vw;
+    left: 3vw;
+    right: 3vw;
+    }
+
+  .none-pad {
+    width: 88%;
+  }
+
+}
+
+  /* desktop */
+@media (min-width: 768px) {
+  .drumPad {
+    width: 25vw;
+    height: 25vw;
+    margin-top: 8vh;
+    grid-gap: 20px;
+    padding: 30px; 
+   }
 }
 
 .morocco-pad {
@@ -176,31 +248,57 @@ body {
 /* type of drum currently playing */
 
 .drumName {
-  position: relative;
+  position: absolute;
+  bottom: 1vh;
+  margin: 0;
+  padding: 0;
   width: 100%;
+  text-align: center;
+  margin: 0 5vw;
+}
+
+/* desktop */
+@media (min-width: 769px) {
+.drumName {
+  position: relative;
   height: 50px;
   padding: 8px;
   align-self: center;
-  text-align: center;
   color: #454545;
+  }
 }
 
 .japan-drumName {
   font-family: 'bonzairegular';
-  font-size: 28pt;
+  font-size: 20pt;
   text-shadow: 2px 2px #ffb3d5;
 }
-
 .burundi-drumName {
   font-family: 'zilap_africaregular';
-  font-size: 20pt;
+  font-size: 18pt;
   text-shadow: 2px 2px #ffcb0c;
 }
 
 .morocco-drumName {
   font-family: 'arabian_knightregular';
-  font-size: 22pt;
+  font-size: 20pt;
   text-shadow: 2px 2px #ff5900;
+}
+
+
+  /* desktop */
+@media (min-width: 768px) {
+.japan-drumName {
+  font-size: 28pt;
+}
+
+.burundi-drumName {
+  font-size: 20pt;
+}
+
+.morocco-drumName {
+  font-size: 22pt;
+}
 
 }
 
@@ -210,22 +308,46 @@ body {
   height: 70%;
   width: 35vw;
   margin-left: 10%;
-  
+
+}
+
+@media (max-width: 768px) {
+  .inputs {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* row for power slider and label */
 .power-switch {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 10% 0;
+  justify-content: center; 
 }
 
 .label {
-  margin-right: 5%;
-  font-size: 22pt;
   font-family: 'VT323';
+  font-size: 20pt;
+  margin: 5vh 3vw;
 }
+
+/* desktop */
+@media (min-width: 768px) {
+  .power-switch {
+    margin: 10% 0;
+  }
+
+  .label {
+    margin-right: 5%;
+    font-size: 22pt;
+    
+  }
+}
+
 
 /* column for country selectors and label saying which is selected */
 
@@ -238,17 +360,31 @@ body {
 
 .drumNames {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+  /* desktop */
+@media (min-width: 768px) {
+  .drumNames {
+    justify-content: space-between;
+  }
 }
 
 /* country buttons */
 
-.button-country {
+.button-country{
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
   border: none;
-  /*box-shadow: 0 0 8px 2px #545454;*/
+  height: 10vh;
+  width: 10vh;
+}
+
+  /* desktop */
+@media (min-width: 768px) {
+  .button-country {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 .japan-button {
@@ -272,47 +408,65 @@ body {
 }
 
 /* label for which country is selected */
-
 .display-japan {
-
-  margin-bottom: 0;
+  margin-top: 4vh;
   align-self: center;
   font-family: 'bonzairegular';
-  font-size: 30pt;
-  line-height: 20px;
-  margin-top: 30px;
+  font-size: 24pt;
   color: #454545;
   text-shadow: 2px 2px #ffb3d5;
 }
 
 .display-morocco {
-
-  margin-bottom: 0;
-  line-height: 20px;
-  margin-top: 30px;
+  margin-top: 5vh;
   align-self: center;
   font-family: 'arabian_knightregular';
-  font-size: 24pt;
+  font-size: 18pt;
+  color: #454545;
   text-shadow: 2px 2px #ff5900;
-
 }
 
 .display-burundi {
-
-  margin-bottom: 0;
+  margin-top: 5vh;
   align-self: center;
   font-family: 'wild_africaregular';
-  font-size: 20pt;
-  line-height: 20px;
-  margin-top: 30px;
+  font-size: 16pt;
   color: #454545;
   text-shadow: 2px 2px #ffcb0c;
 }
 
 .display-none {
+  margin-top: 3vh;
   align-self: center;
   font-family: 'VT323';
-  font-size: 24pt;
+  font-size: 20pt;
+}
+
+  /* desktop */
+@media (min-width: 768px) {
+  .display-japan {
+    font-size: 30pt;
+    line-height: 20px;
+    margin-top: 8vh;
+  }
+
+  .display-morocco {
+    margin-bottom: 0;
+    line-height: 20px;
+    margin-top: 8vh;
+    font-size: 24pt;
+  }
+
+  .display-burundi {
+    margin-bottom: 0;
+    font-size: 20pt;
+    line-height: 20px;
+    margin-top: 8vh;
+  }
+
+  .display-none {
+    font-size: 24pt;
+  }
 }
 
  /* The switch - the box around the slider */
@@ -339,7 +493,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2196F3;
+  background-color: rgb(  33, 150, 243, 0.7);
   transition: .4s;
   border-radius: 34px;
 }
