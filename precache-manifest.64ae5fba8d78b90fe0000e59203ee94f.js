@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "35f70927d8ad84ce6742",
-    "url": "/drum-kit/static/css/main.a392ba63.chunk.css"
+    "revision": "6bd5da4ef518eb32ac0d",
+    "url": "/drum-kit/static/css/main.0df3647d.chunk.css"
   },
   {
-    "revision": "35f70927d8ad84ce6742",
-    "url": "/drum-kit/static/js/main.35f70927.chunk.js"
+    "revision": "6bd5da4ef518eb32ac0d",
+    "url": "/drum-kit/static/js/main.6bd5da4e.chunk.js"
   },
   {
     "revision": "77958300264c6869a197",
@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/bonzai-webfont.3fe0b1d3.woff"
   },
   {
-    "revision": "dc43868e85c8db86b7641212786e6070",
-    "url": "/drum-kit/static/media/arabian_knight-webfont.dc43868e.woff"
-  },
-  {
     "revision": "e700d0dcf85d6bbd26e77667b13249e2",
     "url": "/drum-kit/static/media/arabian_knight-webfont.e700d0dc.woff2"
+  },
+  {
+    "revision": "dc43868e85c8db86b7641212786e6070",
+    "url": "/drum-kit/static/media/arabian_knight-webfont.dc43868e.woff"
   },
   {
     "revision": "06d2c2e08e6a109b5e180fe3d05cf713",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/wild_africa-webfont.5ba51fdb.woff"
   },
   {
-    "revision": "b23168987587d2c9d464800ad4c9f1cf",
+    "revision": "4dbc01034b9e8a871d40cb15b042e8b8",
     "url": "/drum-kit/index.html"
   }
 ];
